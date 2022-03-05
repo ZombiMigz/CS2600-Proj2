@@ -1,7 +1,7 @@
 //Calculating trip length and other expenses based on trip length
 
 #include <stdio.h>
-#include tripTime.h
+#include "tripTime.h"
 
 //Function Definition
 int getDaysOnTrip();
