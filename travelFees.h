@@ -1,7 +1,7 @@
 // various static travel fees
 
-#ifndef TRIPTIME_H
-#define TRIPTIME_H
+#ifndef TRAVELFEES_H
+#define TRAVELFEES_H
 #include "main.h"
 // asks the user for various costs ( some expected cost constants are defined in instructions )
 Expense calculateAirfare();

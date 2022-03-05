@@ -1,5 +1,5 @@
-#ifndef TRIPTIME_H
-#define TRIPTIME_H
+#ifndef MEALFEES_H
+#define MEALFEES_H
 #include "main.h"
 // calculate costs for various meals
 /*
