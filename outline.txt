@@ -33,11 +33,17 @@ void calculateAndPrintExpenses - calculates and returns expenses based on expens
 **Travel fees**
 create various functions requiring user input and returning Expense
 
-**Days/Time/Meals**
+**Days/Time**
 create date and time int in main
 create functions asking for trip length(days & time)
+
+**Meals**
 create function to calculate meal prices
 
-**Other expenses/Input Validation** 
-create various functions for all other expenses(conference, seminar, hotel)
+**Other expenses** 
+create various functions for all other expenses(parking, taxi, hotel)
+
+**Input Validation**
 add input validation
+
+**Unit Tests**
