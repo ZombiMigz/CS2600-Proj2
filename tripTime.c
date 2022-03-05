@@ -57,7 +57,7 @@ int getEndTime(){
         scanf("%i", &endTime);
         if((endTime < 0) || (endTime > 2400)){
             printf("\nInvalid entry. Please enter a value between 0000 and 2400.");
-            printf("\nPlease enter the trip's departure time in military time: ")
+            printf("\nPlease enter the trip's departure time in military time: ");
         }
     }while((endTime < 0) || (endTime > 2400));
 
