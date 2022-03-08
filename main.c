@@ -8,11 +8,34 @@ struct Expense expenses[999];
 int count = 0;
 void printExpenses() // temporary for debugging
 {
-  for (int i = 0; i < count; i++)
+  float totalCost = 0;
+  float totalCompanyPays = 0;
+  float totalEmployeePays = 0;
+  float totalSavings = 0;
+  for (int i = 0; i < count; i++) // iterate through expenses
   {
-    printf("%d) |Actual Cost: %.2f |Company Covered Cost: %.2f |Reimbursed: %.2f |Saved: %.2f\n",
-           i, expenses[i].actualCost, expenses[i].expectedCost, 0, 0);
+    float actualCost = expenses[i].actualCost;    // cost of the expense
+    float companyPaid = expenses[i].expectedCost; // the amount the company pays
+
+    totalCost += actualCost;
+    if (actualCost > companyPaid) // the businessperson used more than the company will cover
+    {
+      totalCompanyPays += companyPaid;
+      totalEmployeePays += actualCost - companyPaid;
+    }
+    if (companyPaid > actualCost) // the businessperson used less money than the company will cover
+    {
+      totalCompanyPays += actualCost;
+      totalSavings += companyPaid - actualCost;
+    }
+    if (companyPaid == actualCost) // company covers all costs
+    {
+      totalCompanyPays += actualCost;
+    }
   }
+
+  // print results
+  printf("Total Cost of Trip: $%.2f\nCompany Pays: $%.2f\nEmployee Need to Pay: $%.2f\nEmployee Saved: $%.2f", totalCost, totalCompanyPays, totalEmployeePays, totalSavings);
 }
 
 int main()
