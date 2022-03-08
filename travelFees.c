@@ -11,7 +11,7 @@ struct Expense calculateAirfare()
     scanf("%f", &fees);
 
     struct Expense AirFare;
-    AirFare.expectedCost = 0; // idk what this should be
+    AirFare.expectedCost = fees;
     AirFare.actualCost = fees;
     return AirFare;
 };
@@ -23,7 +23,7 @@ struct Expense calculateCarRentals()
     scanf("%f", &rentals);
 
     struct Expense CarRental;
-    CarRental.expectedCost = 0; // idk what this should be
+    CarRental.expectedCost = rentals;
     CarRental.actualCost = rentals;
     return CarRental;
 };
@@ -35,7 +35,7 @@ struct Expense calculateGasCost()
     scanf("%f", &miles);
 
     struct Expense GasCost;
-    GasCost.expectedCost = 0; // idk what this should be
+    GasCost.expectedCost = miles * .27;
     GasCost.actualCost = miles * .27;
     return GasCost;
 }; // ask for mile and multiply by $.27
@@ -47,7 +47,7 @@ struct Expense calculateConferenceOrSeminarFees()
     scanf("%f", &comSemFee);
 
     struct Expense ConferenceOrSeminar;
-    ConferenceOrSeminar.expectedCost = 0; // idk what this should be
+    ConferenceOrSeminar.expectedCost = comSemFee;
     ConferenceOrSeminar.actualCost = comSemFee;
     return ConferenceOrSeminar;
 };
