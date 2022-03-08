@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 #include "tripTime.h"
+
 #include "mealFees.h"
 #include "travelFees.h"
 
@@ -38,6 +39,7 @@ void printExpenses() // temporary for debugging
   printf("Total Cost of Trip: $%.2f\nCompany Pays: $%.2f\nEmployee Need to Pay: $%.2f\nEmployee Saved: $%.2f", totalCost, totalCompanyPays, totalEmployeePays, totalSavings);
 }
 
+
 int main()
 {
   // start program
@@ -47,6 +49,7 @@ int main()
   days = getDaysOnTrip();
   startTime = getStartTime();
   endTime = getEndTime();
+
 
   // get meal costs
   for (int day = 1; day <= days; day++) // breakfast
