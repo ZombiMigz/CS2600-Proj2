@@ -2,6 +2,7 @@
 #include "main.h"
 #include "tripTime.h"
 #include "mealFees.h"
+#include "travelFees.h"
 
 struct Expense expenses[999];
 int count = 0;
@@ -49,6 +50,12 @@ int main()
       continue;
     expenses[count++] = calculateDinner(&day);
   }
+
+  // get travel fees
+  expenses[count++] = calculateAirfare();
+  expenses[count++] = calculateCarRentals();
+  expenses[count++] = calculateGasCost();
+  expenses[count++] = calculateConferenceOrSeminarFees();
 
   printExpenses();
   return 0;
