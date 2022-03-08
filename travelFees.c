@@ -4,7 +4,7 @@
 
 // asks the user for various costs
 
-struct Expense calculateAirfare()
+struct Expense calculateAirfare() 
 {
     printf("\n Please provide the cost of roundtrip airfare:");
     float fees;
@@ -41,4 +41,15 @@ struct Expense calculateGasCost()
 }; // ask for mile and multiply by $.27
 
 
-//struct Expense calculateConferenceOrSeminarFees();
+struct Expense calculateConferenceOrSeminarFees()
+{
+    printf("\n Please provide the miles traveled in a private vehicle");
+        float comSemFee;
+        scanf("%f", &comSemFee); 
+
+
+        struct Expense ConferenceOrSeminar; 
+        ConferenceOrSeminar.expectedCost = 0;//idk what this should be
+        ConferenceOrSeminar.actualCost = comSemFee;
+        return ConferenceOrSeminar;
+};
