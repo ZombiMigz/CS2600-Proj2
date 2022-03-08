@@ -18,7 +18,18 @@ struct Expense calculateAirfare()
     return AirFare;
 };
 
-//struct Expense calculateCarRentals();
+struct Expense calculateCarRentals()
+{
+    printf("\n Please provide the amount for any and all car rentals");
+    float rentals;
+    scanf("%f", &rentals); 
+
+
+    struct Expense CarRental; 
+    CarRental.expectedCost = 0; //idk what this should be
+    CarRental.actualCost = rentals;
+    return CarRental;
+};
 
 //struct Expense calculateGasCost();
 
