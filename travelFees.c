@@ -24,13 +24,23 @@ struct Expense calculateCarRentals()
     float rentals;
     scanf("%f", &rentals); 
 
-
     struct Expense CarRental; 
     CarRental.expectedCost = 0; //idk what this should be
     CarRental.actualCost = rentals;
     return CarRental;
 };
 
-//struct Expense calculateGasCost();
+struct Expense calculateGasCost()
+{
+    printf("\n Please provide the miles traveled in a private vehicle");
+    float miles;
+    scanf("%f", &miles);
+
+    struct Expense GasCost; 
+    GasCost.expectedCost = 0;//idk what this should be
+    GasCost.actualCost = miles * .27;
+    return GasCost;
+}; // ask for mile and multiply by $.27
+
 
 //struct Expense calculateConferenceOrSeminarFees();
