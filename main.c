@@ -4,6 +4,7 @@
 
 #include "mealFees.h"
 #include "travelFees.h"
+#include "variableFees.h"
 
 struct Expense expenses[999];
 int count = 0;
@@ -39,7 +40,6 @@ void printExpenses() // temporary for debugging
   printf("Total Cost of Trip: $%.2f\nCompany Pays: $%.2f\nEmployee Need to Pay: $%.2f\nEmployee Saved: $%.2f", totalCost, totalCompanyPays, totalEmployeePays, totalSavings);
 }
 
-
 int main()
 {
   // start program
@@ -49,7 +49,6 @@ int main()
   days = getDaysOnTrip();
   startTime = getStartTime();
   endTime = getEndTime();
-
 
   // get meal costs
   for (int day = 1; day <= days; day++) // breakfast
@@ -82,6 +81,14 @@ int main()
   expenses[count++] = calculateCarRentals();
   expenses[count++] = calculateGasCost();
   expenses[count++] = calculateConferenceOrSeminarFees();
+
+  // get various other fees that depend on length of trip
+  for (int day = 1; day <= days; day++)
+  {
+    expenses[count++] = calculateParkingFees(&day);
+    expenses[count++] = calculateTaxiFees(&day);
+    expenses[count++] = calculateHotelExpenses(&day);
+  }
 
   printExpenses();
   return 0;
