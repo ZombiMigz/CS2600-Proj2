@@ -3,8 +3,7 @@
 #define VARIABLEFEES_H
 #include "main.h"
 
-Expense calculateParkingFees();
-Expense calculateTaxiFees();
-Expense calculateHotelExpenses();
+struct Expense calculateParkingFees();
+struct Expense calculateTaxiFees();
+struct Expense calculateHotelExpenses();
 #endif
-

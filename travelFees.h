@@ -10,5 +10,4 @@ struct Expense calculateCarRentals();
 struct Expense calculateGasCost(); // ask for mile and multiply by $.27
 struct Expense calculateConferenceOrSeminarFees();
 
-
 #endif
